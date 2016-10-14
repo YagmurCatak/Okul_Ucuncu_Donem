@@ -16,5 +16,16 @@ namespace colorfull_buttons
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button.BackColor = Color.Chocolate;
+        }
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            button.BackColor = Color.Blue;
+
+        }
     }
 }
