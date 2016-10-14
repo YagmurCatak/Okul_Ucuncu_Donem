@@ -39,7 +39,9 @@
             this.button.TabIndex = 0;
             this.button.Text = "RenkDegistir";
             this.button.UseVisualStyleBackColor = true;
-            this.button.Click += new System.EventHandler(this.button1_Click);
+            
+            this.button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_MouseClick);
+            this.button.MouseHover += new System.EventHandler(this.button_MouseHover);
             // 
             // Form1
             // 
@@ -47,9 +49,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.button);
-            this.Name = "button";
+            this.Name = "Form1";
             this.Text = "RenkDegıstır";
-            
             this.ResumeLayout(false);
 
         }
