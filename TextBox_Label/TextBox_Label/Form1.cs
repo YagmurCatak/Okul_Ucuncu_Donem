@@ -27,6 +27,13 @@ namespace TextBox_Label
         private void button1_Click(object sender, EventArgs e)
         {
             label1.Text = textBox1.Text;
+     
+            label1.Enabled = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label1.Enabled = false;
         }
 
         
