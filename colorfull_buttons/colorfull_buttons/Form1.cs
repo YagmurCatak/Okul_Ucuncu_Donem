@@ -22,19 +22,14 @@ namespace colorfull_buttons
         private void button_MouseClick(object sender, MouseEventArgs e)
         {
             button.BackColor = Color.Orange;
+            this.button.MouseHover -= new System.EventHandler(this.button_MouseHover);
         }
 
         private void button_MouseHover(object sender, EventArgs e)
         {
-            if (button.BackColor == Color.Orange)
-            {
-
-            }
-            else
-            {
-                button.BackColor = Color.Red;
-            }
-           
+            
+            button.BackColor = Color.Red;
+          
         }
 
        
