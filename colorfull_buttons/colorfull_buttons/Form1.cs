@@ -16,17 +16,28 @@ namespace colorfull_buttons
         {
             InitializeComponent();
         }
-        private void button_MouseHover(object sender, EventArgs e)
-        {
-            button.BackColor = Color.Red;
-        }
+       
       
 
         private void button_MouseClick(object sender, MouseEventArgs e)
         {
-            button.BackColor = Color.Chocolate;
+            button.BackColor = Color.Orange;
         }
 
+        private void button_MouseHover(object sender, EventArgs e)
+        {
+            if (button.BackColor == Color.Orange)
+            {
+
+            }
+            else
+            {
+                button.BackColor = Color.Red;
+            }
+           
+        }
+
+       
      
     }
 }

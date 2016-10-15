@@ -39,7 +39,6 @@
             this.button.TabIndex = 0;
             this.button.Text = "RenkDegistir";
             this.button.UseVisualStyleBackColor = true;
-            
             this.button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_MouseClick);
             this.button.MouseHover += new System.EventHandler(this.button_MouseHover);
             // 
