@@ -28,12 +28,14 @@ namespace TextBox_Label
         {
             label1.Text = textBox1.Text;
      
-            label1.Enabled = true;
+            //label1.Enabled = true;
+            label1.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Enabled = false;
+            //label1.Enabled = false;
+            label1.Visible = false;
         }
 
         
