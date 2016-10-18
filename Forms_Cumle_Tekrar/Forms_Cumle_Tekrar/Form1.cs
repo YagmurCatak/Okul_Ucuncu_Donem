@@ -20,15 +20,18 @@ namespace Forms_Cumle_Tekrar
         private void button1_Click(object sender, EventArgs e)
         {
             label2.Visible = true;
-            for (int i = 0; i < 11; i++)
+            string cumle;
+            cumle = textBox.Text;
+            for (int i = 1; i <= 10; i++)
             {
-                label2.Text = textBox.Text;
+                label2.Text = label2.Text + i + ". " + cumle + "\n";
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             label2.Visible = false;
+            
         }
     }
 }

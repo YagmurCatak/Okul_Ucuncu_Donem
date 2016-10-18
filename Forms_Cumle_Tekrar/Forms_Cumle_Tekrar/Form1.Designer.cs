@@ -49,7 +49,6 @@
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(100, 20);
             this.textBox.TabIndex = 1;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // Enter_Buton
             // 
@@ -66,10 +65,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
-            
+            this.label2.Text = "sonuc";
             // 
             // Form1
             // 
