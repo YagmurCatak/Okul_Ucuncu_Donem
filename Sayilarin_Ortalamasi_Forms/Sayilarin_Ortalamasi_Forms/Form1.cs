@@ -12,6 +12,7 @@ namespace Sayilarin_Ortalamasi_Forms
 {
     public partial class Form1 : Form
     {
+        public int Ortalama, Toplam, i;
         public Form1()
         {
             InitializeComponent();
@@ -21,30 +22,21 @@ namespace Sayilarin_Ortalamasi_Forms
         private void enter_Click(object sender, EventArgs e)
         {
             Sonuc.Visible = true;
-            int Sayi; 
+            int Sayi;
+            Sayi = Convert.ToInt32(textBox1.Text);
             if (Sayi == 0)
             {
-                Toplam = 0;
-                Ortalama = 0; 
+                Ortalama = Toplam / i;
+                Sonuc = Ortalama.ToString();
             }
             else
             {
                 Toplam = Toplam + Sayi;
                 i++;
-                Ortalama = Toplam / i;
-                Sonuc.TabIndex = Ortalama;
+                
             }
         }
-        int Ortalama, Toplam, i;
-        private void Form1_load(object sender, EventArgs e)
-        {
-            Sonuc.Visible = false;
-            i = 0;
-            Ortalama = 0;
-            Toplam = 0;
-       
-        }
-
-       
+        
+   
     }
 }

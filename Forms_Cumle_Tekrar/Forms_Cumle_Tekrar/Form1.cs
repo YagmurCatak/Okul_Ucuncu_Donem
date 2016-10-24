@@ -19,7 +19,7 @@ namespace Forms_Cumle_Tekrar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label2.Visible = false;
+            label2.Visible = true;
             string cumle;
             cumle = textBox.Text;
             for (int i = 1; i <= 10; i++)
