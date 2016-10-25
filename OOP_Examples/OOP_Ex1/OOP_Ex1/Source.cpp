@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <stdio.h> 
 
 using namespace std;
 
@@ -84,11 +86,14 @@ int main()
 	//delete smb;
 
 	//MAIN CODE
-	Sembol *smb = new Sembol(myEnums::Kupa);
+	Sembol *smb = new Sembol(myEnums::Sinek);
 	int rakam = 10;
 	IskambilKarti *kart = new IskambilKarti(*smb, rakam);
 
+	
 	cout << ConvertRenkValues(kart->m_sembol.m_renk) << endl;
+	
+	system("pause");
 	return 0;
 }
 
@@ -97,8 +102,12 @@ const char* ConvertRenkValues(myEnums::RenkType renk)
 	switch (renk)
 	{
 	case myEnums::Siyah:
+		system("color 04");
 		return "Siyah";
+		
 	case myEnums::Kirmizi:
+		system("color 40");
 		return "Kirmizi";
+		
 	}
 }
