@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h> 
+#include <time.h>
 
 using namespace std;
 
@@ -70,6 +71,7 @@ public:
 };
 
 const char* ConvertRenkValues(myEnums::RenkType);
+const char* ConvertRenkValues(myEnums::SembolType);
 
 int main()
 {
@@ -86,13 +88,70 @@ int main()
 	//delete smb;
 
 	//MAIN CODE
-	Sembol *smb = new Sembol(myEnums::Sinek);
-	int rakam = 10;
+	srand(time(NULL));
+	int say1,say2;
+	int kart_sayi,Secilen_kart,menu_sayi;
+	int Deger_Tutan[100],YeniArray[100];
+	IskambilKarti iskambilDizi[100];
+	/*int random_rakam = rand()%4;
+	myEnums::SembolType type  = (myEnums::SembolType) random_rakam;
+	Sembol *smb = new Sembol(type);
 	IskambilKarti *kart = new IskambilKarti(*smb, rakam);
+	cout << ConvertRenkValues(kart->m_sembol.m_sembol);
+	cout << rakam <<endl;*/
+	
+	cout << "Istediginiz kart sayisini girin";
+	cin >> kart_sayi;
 
+	for (int i=0; i<=kart_sayi-1; i++)
+	{
+		int rakam ;
+		rakam = rand()%13; 
+		int random_rakam = rand()%4;
+		myEnums::SembolType type  = (myEnums::SembolType) random_rakam;
+		Sembol *smb = new Sembol(type);
+		IskambilKarti *kart = new IskambilKarti(*smb, rakam);
+		cout << ConvertRenkValues(kart->m_sembol.m_sembol);
+		cout << rakam <<endl;
+		iskambilDizi[i] = *kart;
+		
+	}
+	cout << "MENU " << endl;
+	cout << "1.Sil" << endl;
+	cout << "2.Degistir" << endl;
+	cin >> menu_sayi;
+
+	if( menu_sayi == 1)
+	{
+		int i=0;
+		cout <<	"bir kart seciniz" << endl;
+		cin >> Secilen_kart;
+		IskambilKarti bos;
+		iskambilDizi[Secilen_kart] = bos;
+		
+	}
+	else 
+	{
+		cout <<	"iki kart seciniz" << endl;
+		cin >> say1;
+		cin >> say2;
+		IskambilKarti sayidizi;
+		sayidizi= iskambilDizi[say2-1];
+		iskambilDizi[say2-1] = iskambilDizi[say1-1];
+		iskambilDizi[say1-1] = sayidizi;
+
+		for (int i = 0; i <kart_sayi; i++)
+		{
+			
+			cout << iskambilDizi[i].m_rakam<< endl;
+			
+			
+		}
+
+		
+	}
 	
-	cout << ConvertRenkValues(kart->m_sembol.m_renk) << endl;
-	
+
 	system("pause");
 	return 0;
 }
@@ -102,12 +161,33 @@ const char* ConvertRenkValues(myEnums::RenkType renk)
 	switch (renk)
 	{
 	case myEnums::Siyah:
-		system("color 04");
+		system("color 70");
 		return "Siyah";
 		
 	case myEnums::Kirmizi:
-		system("color 40");
+		system("color 74");
 		return "Kirmizi";
 		
 	}
 }
+
+const char* ConvertRenkValues(myEnums::SembolType Sembol)
+{
+	switch (Sembol)
+	{
+	case myEnums::Karo:
+		system("color 70");
+		return "Karo";
+	case myEnums::Sinek:
+		system("color 70");
+		return "Sinek";
+	case myEnums::Maca:
+		system("color 74");
+		return "Maco";
+	case myEnums::Kupa:
+		system("color 74");
+		return "Kupa";
+
+	}
+}
+
