@@ -24,11 +24,7 @@ namespace kullanici_Kayit_Rehberi
             label10.Text = il.Text;
             label13.Text = adres_Kutusu.Text;
             
-
         }
-
-       
-
 
     }
 }
