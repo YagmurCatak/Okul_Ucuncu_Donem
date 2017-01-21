@@ -7,33 +7,27 @@ using System.Threading.Tasks;
 namespace IleriCSharp_DelegeEx1.Classes
 {
     //donus tipi bool olan ve içerisine CustomerAddress Listesi alan bütün fonksiyonları delege edebilir.
-    public delegate bool DoAfterGetAddresses(List<CustomerAddress> ListOfAddresses);
-
-
+    //public delegate bool DoAfterGetAddresses(List<CustomerAddress> ListOfAddresses);
+        
     public class MarketingDepartment
     {
         public bool YeniBirKampanyaYurut(double butce)
         {
-            DoAfterGetAddresses ToDoAfterAddresses;
-
             bool basariliMi = false;
 
             AddressProvider _addressProvider = new AddressProvider();
+            List<CustomerAddress> ListOfAddresses = _addressProvider.GetAddressesNewProspects();
 
             if (butce < 10000)
             {
-                PenCompany _penCompany = new PenCompany();
-                ToDoAfterAddresses = _penCompany.SendPens;
-                //basariliMi = _penCompany.SendPens(_customerAddresses);
+
+                basariliMi = _addressProvider.KalemGonderDelege(ListOfAddresses);
             }
             else
             {
-                CupCompany _cupCompany = new CupCompany();
-                ToDoAfterAddresses = _cupCompany.SendCoffeeCups;
-                //basariliMi = _cupCompany.SendCoffeeCups(_customerAddresses);
-            }
 
-            basariliMi = _addressProvider.DelegeyiCalistir(ToDoAfterAddresses);
+                basariliMi = _addressProvider.KupaGonderDelege(ListOfAddresses);
+            }
 
             return basariliMi;
         }

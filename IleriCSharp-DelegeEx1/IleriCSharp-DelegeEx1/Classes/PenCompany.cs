@@ -12,6 +12,11 @@ namespace IleriCSharp_DelegeEx1.Classes
         {
             //for each CustomerAddress send ball pen
 
+            foreach (CustomerAddress item in ListOfAddresses)  
+            {
+                Console.WriteLine("Kalem " + item.m_name + " adresine yollandi");
+            }
+
             return true;
         }
     }
