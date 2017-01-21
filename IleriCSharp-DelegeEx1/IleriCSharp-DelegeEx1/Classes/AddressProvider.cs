@@ -17,5 +17,14 @@ namespace IleriCSharp_DelegeEx1.Classes
 
             return ListOfAddresses;
         }
+
+        public bool DelegeyiCalistir(DoAfterGetAddresses _delegeMethod)
+        { 
+            List<CustomerAddress> _customerAddress = GetAddressesNewProspects();
+
+            bool basariliMi = _delegeMethod(_customerAddress);
+
+            return basariliMi;
+        }
     }
 }
