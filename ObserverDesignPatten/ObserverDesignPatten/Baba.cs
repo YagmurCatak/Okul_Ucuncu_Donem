@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObserverDesignPatten
 {
-    class Baba
+    class Baba : Observer
     {
         public void HaberVer()
         {

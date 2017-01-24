@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace ObserverDesignPatten
 {
-    class Ogretmen : Observer
+    interface Observer
     {
-        public void HaberVer()
-        {
-            Console.WriteLine("okula gelmedi");
-        }
+        void HaberVer();
     }
 }
