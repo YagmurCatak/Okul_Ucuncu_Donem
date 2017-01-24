@@ -13,7 +13,7 @@ namespace Sosyal_Servis_Uyg
             Sofor m_sofor =new Sofor();
             Kullanici m_kullanici = new Kullanici();
 
-            m_sofor.Attach(Kullanici);
+            m_sofor.Attach(m_kullanici);
 
             m_sofor.RotaDegistir();
             
