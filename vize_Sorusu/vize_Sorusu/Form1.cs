@@ -19,7 +19,7 @@ namespace vize_Sorusu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            kus kus = new kus();
+            defter kus = new kus();
             defter ari = new arics("ss");
             defter aslan = new aslan();
             listele(kus);
@@ -27,7 +27,7 @@ namespace vize_Sorusu
             listele(ari);
             //ari.haberler();
         }
-        public void listele( defter a)
+        public void listele(defter a)
        {
            if (a is defter)
            {

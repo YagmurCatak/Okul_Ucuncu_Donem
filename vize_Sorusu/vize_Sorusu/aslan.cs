@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace vize_Sorusu
 {
-    class aslan:defter 
+    public class aslan:defter 
     {
         string yorunge = "yapma be";
         long sekil = 360;

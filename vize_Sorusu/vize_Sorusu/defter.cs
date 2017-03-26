@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace vize_Sorusu
 {
-    class defter
+    public class defter
     {
         public string yaz;
         public string ciz;

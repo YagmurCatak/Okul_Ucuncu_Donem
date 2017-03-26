@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace vize_Sorusu
 {
-    class kus : defter 
+    public class kus : defter 
     {
         public kus()
             : this(45)

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace vize_Sorusu
 {
-    class arics:kus
+    public class arics:kus
     {
         public int vizviz;
 
