@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sosyal_Servis_Uyg
+namespace giyim_Stok_Uygulamasi
 {
-    class Rota
+    class Program
     {
-        string m_rotaName;
-        List<Durak> m_duraklar;
+        static void Main(string[] args)
+        {
+        }
     }
 }

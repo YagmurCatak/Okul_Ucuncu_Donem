@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sosyal_Servis_Uyg
+namespace Sosyal_Servis_Uyg.Classes
 {
     class SurucuBelgesi
     {
-        DateTime m_tarihi;
-        string m_id;
-
+        private DateTime m_tarihi { get; set; }
+        private string m_id { get; set; }
     }
 }
